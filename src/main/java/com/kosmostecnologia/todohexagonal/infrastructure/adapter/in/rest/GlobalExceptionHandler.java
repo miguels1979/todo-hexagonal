@@ -48,4 +48,14 @@ public class GlobalExceptionHandler {
         problemDetail.setTitle("Petición mal formada");
         return problemDetail;
     }
+
+    @ExceptionHandler(IllegalStateException.class)
+    public ProblemDetail handleIllegalStateException(IllegalStateException ex){
+
+        ProblemDetail problemDetail =  ProblemDetail.forStatusAndDetail(
+                HttpStatus.CONFLICT, ex.getMessage()
+        );
+        problemDetail.setTitle("Operación inválida");
+        return problemDetail;
+    }
 }
