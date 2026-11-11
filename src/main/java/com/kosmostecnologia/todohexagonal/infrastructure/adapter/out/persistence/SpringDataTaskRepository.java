@@ -2,5 +2,5 @@ package com.kosmostecnologia.todohexagonal.infrastructure.adapter.out.persistenc
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface SpingDataTaskRepository extends JpaRepository<TaskJpaEntity, Long> {
+public interface SpringDataTaskRepository extends JpaRepository<TaskJpaEntity, Long> {
 }
